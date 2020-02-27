@@ -5,7 +5,7 @@ function love.load()
 end
 
 function love.draw()
-    love.graphics.print(anim)
+    love.graphics.draw(anim.images[1])
 end
 
 function love.update()
