@@ -1,9 +1,11 @@
-function love.load()
+require('Animation')
 
+function love.load()
+    anim = Animation:new("Run")
 end
 
 function love.draw()
-
+    love.graphics.print(anim)
 end
 
 function love.update()
