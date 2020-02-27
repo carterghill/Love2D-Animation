@@ -5,7 +5,8 @@ function love.load()
 end
 
 function love.draw()
-    love.graphics.draw(anim.images[1])
+    --love.graphics.draw(anim.images[1])
+    anim:play()
 end
 
 function love.update()

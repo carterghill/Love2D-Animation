@@ -12,6 +12,7 @@ function Animation:new(folder)
 
     -- The images loaded into the animation
     anim.images = {}
+    anim.index = 1
     
     -- Add each image in the folder into the images table
     for k, file in ipairs(files) do
@@ -21,6 +22,13 @@ function Animation:new(folder)
     
     -- Play the animation
     function anim:play()
+        
+        love.graphics.draw(self.images[self.index])
+
+        self.index = self.index + 1
+        if self.index > #self.images then
+            self.index = 1
+        end
 
     end
 
